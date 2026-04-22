@@ -100,7 +100,7 @@ El usuario recibe su acceso
 Instalación y Ejecución
 
 Clonar repositorio:
-git clone [https://github.com/zoelinaresrios/TP5DWD](https://github.com/zoelinaresrios/TP6-CONTRASE-A)
+git clone (https://github.com/zoelinaresrios/TP6-CONTRASE-A)
 
 Link de hosting
 
