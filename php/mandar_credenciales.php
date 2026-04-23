@@ -22,14 +22,14 @@ if (!$email || !$usuario || !$password) {
     exit;
 }
 
-// 🔐 Guardar en BD
+// Guardar en BD
 $conn = conectar();
 
 $stmt = $conn->prepare("INSERT INTO usuarios (email, usuario, password) VALUES (?, ?, ?)");
 $stmt->bind_param("sss", $email, $usuario, $password);
 $stmt->execute();
 
-// 📧 CONFIGURAR MAIL
+
 $mail = new PHPMailer(true);
 
 try {
@@ -42,10 +42,10 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port = 465;
 
-    // Remitente
+    
     $mail->setFrom('informacion@alpiletas.com.ar', 'EVA Sistemas');
 
-    // Destinatario
+    
     $mail->addAddress($email);
 
     // Contenido
